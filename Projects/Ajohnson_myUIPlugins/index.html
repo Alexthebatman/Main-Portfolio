@@ -1,0 +1,104 @@
+<!doctype html> <!-- LOOK IM LEARNING! slowly. -->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Untitled</title>
+    <link rel="stylesheet" href="jquery-ui-1.14.2.custom/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Character Creator</h1>
+    </header>
+
+<main> <!-- Fun fact -->
+
+    <!--tabs-->
+
+    <section>
+        <h2>Select Your Class</h2>
+        <div id="tabs">
+            <ul>
+                <li><a href="#fighter">Fighter</a></li>
+                <li><a href="#runner">Runner</a></li>
+                <li><a href="#mage">Mage</a></li>
+            </ul>
+
+            <div id="fighter">
+                <h3>Fighter</h3>
+                <p>A powerful warrior who excels in close combat. High strength but slower movement.</p>
+
+                <!--fighter slider-->
+                <div class="slider-row">
+                    <span>Strength: <span id="fighter-strength-val">50</span></span>
+                    <div id="fighter-strength"></div>
+                    <span>Speed: <span id="fighter-speed-val">50</span></span>
+                </div>
+            </div>
+
+            <div id="runner">
+                <h3>Runner</h3>
+                <p>A swift scout who relies on agility. High speed but lower strength.</p>
+
+                <!--runner slider-->
+                <div class="slider-row">
+                    <span>Stamina: <span id="runner-stamina-val">50</span></span>
+                    <div id="runner-speed"></div>
+                    <span>Speed: <span id="runner-speed-val">50</span></span>
+                </div>
+            </div>
+
+            <div id="mage">
+                <h3>Mage</h3>
+                <p>A mystical spellcaster. Devastating magic but physically weak.</p>
+
+                <!--mage slider-->
+                <div class="slider-row">
+                    <span>Spell Power: <span id="mage-power-val">50</span></span>
+                    <div id="mage-power"></div>
+                    <span>Cast Speed: <span id="mage-cast-val">50</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- accordion (also how the flip this works) -->
+    <section>
+        <h2>what in the great balls of fire is going on (how it works)</h2>
+        <div id="accordion">
+            <h3>Fighter Stats</h3>
+            <div>
+                <p>Fighters have high strength, right, but man are they HEAVY. Gotta get those gains but not in speed. The higher strength you have, the slower your fighter is! Conversely, what good are strong hits when your opponent is faster with the punches.</p>
+            </div>
+
+            <h3>Runner Stats</h3>
+            <div>
+                <p>Runners rely on.. dare i say, speed! This is the class for those people who hate confrontation and want to run away from their problems. Sure you can't do that in real life, but you will do it here damnit!</p>
+            </div>
+
+            <h3>Mage Stats</h3>
+            <div>
+                <p>Mages cast really cool spells. Sometimes they get your bread perfectly cooked, other times they throw a tsunami at you in Kansas! Don't ask me where they got the water, all I know is we have a drought now. Thanks a lot Emily.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- dialog (i never checked if you could read, though, who neeeeeeds to read.) -->
+<section>
+    <button id="create-btn">[ CREATE PERSONNNN (YOU'RE GOD NOW AAAAAA) ]</button>
+</section>
+
+<div id="dialog" title="Hero Created!">
+    <p>Your hero is ready for trauma (killing things)!</p>
+    <div id="final-stats"></div>
+</div>
+
+</main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jquery-ui-1.14.2.custom/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

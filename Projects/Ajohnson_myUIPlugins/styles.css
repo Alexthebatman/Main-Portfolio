@@ -1,0 +1,138 @@
+.slider-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.slider-row div {
+    flex: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a12;
+    color: #d0d0d0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #00d9ff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #e6d250;
+}
+
+a {
+    color: #00d9ff;
+}
+
+a:hover {
+    color: #ff2a6d;
+}
+
+section {
+    background-color: #1a1a24;
+    border: 2px solid #3a3a4a;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.slider-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.slider-row div {
+    flex: 1;
+}
+
+#create-btn {
+    background-color: #1a1a24;
+    color: #ff2a6d;
+    border: 2px solid #ff2a6d;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+#create-btn:hover {
+    background-color: #ff2a6d;
+    color: #0a0a12;
+}
+
+.ui-accordion .ui-accordion-header {
+    background-color: #2a2a2a;
+    color: #00d9ff;
+    border: 1px solid #3a3a4a;
+}
+
+.ui-accordion .ui-accordion-content {
+    background-color: #1a1a24;
+    color: #d0d0d0;
+    border: 1px solid #3a3a4a;
+}
+
+.ui-tabs .ui-tabs-nav {
+    background-color: #0a0a12;
+    border: none;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    color: #00d9ff;
+}
+
+.ui-tabs .ui-tabs-panel {
+    background-color: #1a1a24;
+    border: 1px solid #3a3a4a;
+}
+
+.ui-slider {
+    background-color: #3a3a4a;
+    border: none;
+}
+
+.ui-slider .ui-slider-handle {
+    background-color: #00d9ff;
+    border: none;
+}
+
+.ui-slider .ui-slider-range {
+    background-color: #ff2a6d;
+}
+
+.ui-dialog {
+    background-color: #1a1a24;
+    border: 2px solid #ff2a6d;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    background-color: #2a2a2a;
+    color: #e6d250;
+    border: none;
+}
+
+.ui-dialog .ui-dialog-content {
+    color: #d0d0d0;
+}
+
+footer {
+    text-align: center;
+    color: #3a3a4a;
+    margin-top: 40px;
+}

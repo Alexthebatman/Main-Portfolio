@@ -1,0 +1,478 @@
+/* resets the pages styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+    font-family: 'Press Start 2P', cursive;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/wood.jpeg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* for 3d */
+.book-container {
+    perspective: 2500px;
+    width: 900px;
+    height: 1200px;
+    position: relative;
+}
+
+/* the book cover and all of its amazing looks */
+.book-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/redleather.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 5px 15px 15px 5px;
+    box-shadow: 
+    -8px 8px 20px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(0, 0, 0, 0.3);
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.book-cover h1 {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2;
+    text-shadow: 
+        3px 3px 0 #000,
+        -1px -1px 0 #000;
+}
+
+/* PRESS IT */
+#open-btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 15px 30px;
+    background: #cc0000;
+    color: #fff;
+    border: 4px solid #ffcc00;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+#open-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+#open-btn:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+/* the inside of this magical manual */
+.book-inside {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    background: #f4e4c1;
+    background-image: url('images/paper.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px 15px 15px 5px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+}
+
+/* show the inside when the book is flipped, this took a while to figure out */
+
+.book-inside.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* top section of the resume */
+
+.top-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    flex: 1;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.4);
+    border: 4px solid #cc0000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.info-box h2 {
+    font-size: 1rem;
+    color: #cc0000;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #cc0000;
+    padding-bottom: 10px;
+}
+
+.info-box .name {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.info-box .title {
+    font-size: 0.75rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.job {
+    margin-bottom: 15px;
+}
+
+.job-title {
+    font-size: 0.8rem;
+    color: #000;
+}
+
+.job-company {
+    font-size: 0.55rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.job-desc {
+    font-size: 0.55rem;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-list li {
+    font-size: 0.55rem;
+    background: #cc0000;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 5px;
+    border: 3px solid #ffcc00;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 4px 4px 0 #000;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.skill-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+.skill-list li:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+.school {
+    font-size: 0.8rem;
+    color: #000;
+}
+
+.degree {
+    margin-top: 10px;
+    font-size: 0.55rem;
+    color: #333;
+}
+
+/* end of top section, divider for visual separation */
+
+.divider {
+    height: 4px;
+    background: linear-gradient(to right, transparent, #cc0000, transparent);
+    margin: 25px 0;
+}
+
+/* bottom of page, this showcases some of my work */
+
+.bottom-section {
+    flex: 1;
+}
+
+.bottom-section h2 {
+    font-size: 1.1rem;
+    color: #cc0000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* carousel (from bootstrap) */
+
+.carousel {
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.4);
+    border: 4px solid #cc0000;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.carousel-item .project-label {
+    font-size: 0.7rem;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #cc0000;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.carousel-indicators button {
+    background-color: #cc0000;
+}
+
+.carousel-indicators button.active {
+    background-color: #cc0000;
+}
+
+/* social media link */
+
+.social-link {
+    font-size: 0.5rem;
+    color: #cc0000;
+    text-decoration: none;
+    border: 3px solid #cc0000;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+}
+
+.social-link:hover {
+    background: #cc0000;
+    color: #fff;
+}
+
+/* footer, as i skipped the typical top float thing*/
+
+footer {
+    margin-top: 30px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* all of this is for the flipping animation */
+
+.book-cover.flipped {
+    transform: rotateY(-180deg);
+}
+
+.book-cover h1, .book-cover #open-btn {
+    transition: opacity 0.3s ease;
+}
+
+.book-cover.flipped h1, .book-cover.flipped #open-btn {
+    opacity: 0;
+}
+
+
+/* tablet styles */
+
+@media (max-width: 768px) {
+    body {
+        overflow: hidden;
+        padding: 0;
+    }
+
+    body.book-open {
+        overflow-y: auto;
+    }
+
+    .book-container {
+        width: 100%;
+        height: 100vh;
+        perspective: none;
+    }
+
+    .book-cover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        transform: none;
+        z-index: 100;
+        transition: opacity 0.5s ease;
+    }
+
+    .book-cover h1 {
+        font-size: 1rem;
+        line-height: 1.8;
+        padding: 0 20px;
+    }
+
+    #open-btn {
+        font-size: 0.7rem;
+        padding: 12px 24px;
+    }
+
+    .book-cover.flipped {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .book-inside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+        border-radius: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .book-inside.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .top-section {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .info-box {
+        padding: 15px;
+    }
+
+    .info-box h2 {
+        font-size: 0.8rem;
+    }
+
+    .info-box .name {
+        font-size: 1.2rem;
+    }
+
+    .info-box .title {
+        font-size: 0.65rem;
+    }
+
+    .job-title {
+        font-size: 0.7rem;
+    }
+
+    .job-company,
+    .job-desc {
+        font-size: 0.5rem;
+    }
+
+    .skill-list li {
+        font-size: 0.5rem;
+        padding: 6px 10px;
+    }
+
+    .school {
+        font-size: 0.7rem;
+    }
+
+    .degree {
+        font-size: 0.5rem;
+    }
+
+    .bottom-section h2 {
+        font-size: 0.9rem;
+    }
+
+    .carousel {
+        height: auto;
+        padding: 10px;
+    }
+
+    .carousel-item img {
+        height: 200px;
+    }
+
+    .carousel-item .project-label {
+        font-size: 0.6rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .carousel-indicators {
+        margin-bottom: -1px;
+    }
+}
+
+/* mobile styles */
+
+@media (max-width: 480px) {
+    .book-cover h1 {
+        font-size: 0.8rem;
+    }
+
+    #open-btn {
+        font-size: 0.6rem;
+        padding: 10px 20px;
+    }
+
+    .info-box .name {
+        font-size: 1rem;
+    }
+
+    .carousel-item img {
+        height: 150px;
+    }
+
+    .social-link {
+        font-size: 0.45rem;
+        padding: 6px 10px;
+    }
+}

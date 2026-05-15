@@ -1,0 +1,30 @@
+[
+    {
+        "name": "David",
+        "age": 28,
+        "gender": "male",
+        "personality": "Adventurous",
+        "background": "David traveled the world as a hunter. He would typically hunt rabbits and other small game. But he is now in for a wild ride as he enters the world of Wisteria."
+    },
+    {
+        "name": "Merlin",
+        "age": 84,
+        "gender": "female",
+        "personality": "Intelligent",
+        "background": "Merlin is a scholar who has spent her life reading about the world of Wisteria. She knows a lot about magic and other mystical creatures within the world. She is excited to get to study the animals on this adventure!"
+    },
+    {
+        "name": "Michael",
+        "age": 45,
+        "gender": "male",
+        "personality": "Brave",
+        "background": "Michael is a former soldier who has always been known to charge straight into danger. He has rescued several of his comrades from the battlefield. He is ready to stand till the very end to protect his comrades."
+    },
+    {
+        "name": "Emily",
+        "age": 21,
+        "gender": "female",
+        "personality": "Bold",
+        "background": "Emily is the classic princess. She wants to explore the world, and is determined to go out despite the dangers. While the group feels the need to keep her safe, she is more than willing to hold her own. Unlike normal royalty, she has studied swordplay in her free time, as well as how to handle a bow. Her skills may come in useful this adventure."
+    }
+]

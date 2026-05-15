@@ -1,0 +1,311 @@
+/* font stuff */
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Jersey+10&display=swap');
+
+
+/* animation styles for the wording and also stylistic choices */
+
+    /* a bit of a bob */
+
+    @keyframes bob-up-down {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(var(--bob-amount));
+        }
+        100% {
+            transform: translateY(0);
+        }
+    } 
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: #a19377;
+    background-image: url("pixel.jpeg");
+    background: url("pixel.jpeg") center center / cover no-repeat fixed;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+    font-size: 5rem;
+    margin-top: 8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1, h3 {
+    --bob-amount: -1rem;
+    animation: bob-up-down 1.8s ease-in-out infinite;
+}
+
+.flex {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.infobox {
+    border: white solid 5px;
+    border-radius: 30px;
+    height: 500px;
+    width: 350px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    --bob-amount: -0.5rem;
+    animation: bob-up-down 1.8s ease-in-out infinite;
+    background-image: url("brick.jpeg");
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    overflow: auto;
+    clip-path: inset(0 round 30px);
+}
+
+.infobox::-webkit-scrollbar {
+    width: 12px;
+}
+
+.infobox::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.infobox::-webkit-scrollbar-thumb {
+    background: #4391f7;
+    border-radius: 10px;
+}
+
+.box-text {
+    margin-top: 30px;
+    color: white;
+    font-family: "Bitcount Grid Double", system-ui;
+}
+
+.infobox-header {
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 5px solid white;
+}
+
+.infobox-header h2 {
+    color: white;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.module-bar {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+    border-radius: 10px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    border: 2px solid transparent; 
+}
+
+.module-bar:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    border:  black solid 2px;
+    transition: border-color 0.5s ease, transform 0.5s ease;
+}
+
+.credit {
+    color: white;
+    text-align: center;
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.75rem 0 0;
+}
+
+.a-icon{
+  display: inline-flex;
+  align-items: center;
+}
+
+.Abutton{
+  width: 1.1em;
+  height: 1.1em;
+  display: block;
+  margin: 0;
+}
+
+
+/* Descbox styling */
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    position: relative;
+    width: min(900px, 90vw);
+    height: min(550px, 85vh);
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 8px solid #19b5d4;
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+    outline-offset: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.3);
+    align-items: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: red;
+}
+
+.descbox-title {
+    align-self: center;
+    margin-top: 0;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.descbox-desc {
+    margin: 1rem 0;
+    width: 90%;
+    height: auto;
+    flex-grow: 1;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+.descbox-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: blue;
+    font-size: 1.25rem;
+}
+
+.modal pre {
+    background-color: #1a1a2e;
+    color: #00ff88;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    text-align: left;
+    width: 90%;
+    border: 2px solid #333;
+    line-height: 1.6;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.modal pre code {
+    white-space: pre;
+}
+
+.modal-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tab-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #19b5d4;
+    background: transparent;
+    color: #333;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.tab-btn.active {
+    background: #19b5d4;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    width: 90%;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content.code pre {
+    max-height: none;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .flex {
+        grid-auto-flow: row;
+        gap: 3rem;
+        justify-self: stretch;
+        padding: 0 1rem;
+    }
+
+    .infobox {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        min-height: 420px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-top: 4rem;
+    }
+}

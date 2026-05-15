@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Jersey+10&display=swap');
+
+@keyframes bob-up-down {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(var(--bob-amount));
+        }
+        100% {
+            transform: translateY(0);
+        }
+    } 
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("pixel.jpeg") center center / cover no-repeat fixed;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.credit {
+    color: white;
+    text-align: center;
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.75rem 0 0;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+    font-size: 5rem;
+    margin-top: 8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1, h3 {
+    --bob-amount: -1rem;
+    animation: bob-up-down 1.8s ease-in-out infinite;
+}
+
+h2 {
+    padding: 1rem;
+    background-color: #3099f0;
+    border-radius: 30px;
+    border: 4px solid white;
+}
+
+.boxsection {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper-fixer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.character-set {
+    display: flex;
+    border-radius: 10px;
+    border: 10px solid grey;
+    width: fit-content;
+}
+
+.character-button {
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease;
+    height: 260px;
+    width: 160px;
+    border: 2px solid grey;
+    overflow: hidden;
+}
+
+.character-button:hover {
+    transform: scale(1.05);
+}
+
+.character-button img {
+    height: 160px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.character-button p {
+    color: white;
+    margin: 8px 0 0 0;
+}
+
+pre {
+    background: black;
+    max-height: 400px;
+    width: 100%;
+    border: 10px solid white;
+    border-radius: 30px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+code {
+    padding: 1rem;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.code-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    width: 90%;
+}
+
+#copybutton {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: blue;
+    padding: 0.5rem 1rem;
+}
+
+#copybutton:hover {
+    background-color: lightgrey;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.explain {
+    max-width: 800px;
+    width: 90%;
+    color: white;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.explain p {
+    color: white;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+.code-box2 {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.content-row {
+    display: flex;
+    gap: 2rem;
+    max-width: 1400px;
+    width: 95%;
+    margin: 2rem auto;
+    align-items: flex-start;
+}
+
+.code-box {
+    flex: 1;
+}
+
+.explain {
+    flex: 1;
+    color: white;
+}
+
+.hi {
+    background-color: grey;
+    border-radius: 30px;
+}

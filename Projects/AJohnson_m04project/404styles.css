@@ -1,0 +1,76 @@
+/* Animation stuff (It's 5 AM don't judge my comments) */
+
+/* Stayed up until 3 am the next night still working on this project too, man my poor schedule */
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    90% { opacity: 1; }
+    91% { opacity: 0.6; }
+    92% { opacity: 1; }
+    94% { opacity: 0.7; }
+    95% { opacity: 1; }
+}
+
+body {
+    background-color: black;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.center h1 {
+    margin: 0;
+    color: red;
+    font-size: 20rem;
+}
+
+.center h2 {
+    margin: 0;
+    margin-top: 1rem;
+    color: white;
+    font-size: 3.5rem;
+}
+
+.error {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    animation: flicker 4s infinite;
+}
+
+button {
+    margin-top: 2rem;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #a31515;
+    color: white;
+    font-size: 4rem;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #eb0707;
+    transform: scale(1.1);
+}
+
+/* Mobile stuff */
+
+@media (max-width: 768px) {
+    .center h1 {
+        font-size: 8rem;
+    }
+
+    .center h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    button {
+        font-size: 2rem;
+        padding: 10px 20px;
+    }
+}

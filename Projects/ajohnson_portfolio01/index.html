@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio 01</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="#top" class="logo">
+            <img src="insitelogo.png" alt="insite motion logo">
+        </a>
+    
+        <button class="hamburger" id="hamburger">☰</button>
+    
+        <nav class="main-nav" id="mainNav">
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="top-banner">
+            <p class="slogan">Great ideas for your business</p>
+            <p class="slogan2">IT'S WHAT WE DO</p>
+            <button class="actionbutton">TELL ME MORE</button>
+        </div>
+
+    <div class="mid-banner" id="services">
+        <div class="mid-section">
+            <p class="mid-header">SERVICES</p>
+            <p class="mid-caption">Our services include content management systems, basic websites, dynamic websites, e-commerce, lead generation, email newsletter templates, Facebook design, Twitter design, blog design, and business planning.</p>          
+        </div>
+
+        <div class="icon-row">
+        <div class="icon-card">
+            <div class="circle-icon-container">
+                <img class="circle-icon" src="500.png" alt="Rocket Icon">
+            </div>
+            <p class="subtitle">Design</p>
+            <p class="icon-caption">What makes your business remarkable? We make sure your business evokes emotion, thought, and sparks.</p>
+        </div>
+        <div class="icon-card">
+            <div class="circle-icon-container">
+                <img class="circle-icon" src="5002.png" alt="Laptop Icon">
+            </div>
+            <p class="subtitle">Marketing</p>
+            <p class="icon-caption">Let us amplify your visibility. At Insite Motion, we take pride in providing the type of insight your business needs.</p>
+        </div>
+        <div class="icon-card">
+            <div class="circle-icon-container">
+                <img class="circle-icon" src="5003.png" alt="Globe Icon">
+            </div>
+            <p class="subtitle">Consulting</p>
+            <p class="icon-caption">Stand out from the crowd! Our experts have years of experience and can help you win the business game.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="third-banner" id="portfolio">
+        <p class="third-header">PORTFOLIO</p>
+        <p class="mid-caption">A few examples of our work.</p>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item" data-project="hutch">
+            <img src="modals/hutch.jpg" alt="Hutch Logo">
+            <div class="portfolio-overlay">
+                <span class="plus">+</span>
+            </div>
+
+            <div class="portfolio-caption">
+                <h3>Hutchinson</h3>
+                <p>Regional Healthcare System</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-project="bt">
+            <img src="modals/bt.jpg" alt="B&T">
+            <div class="portfolio-overlay">
+                <span class="plus">+</span>
+            </div>
+            
+            <div class="portfolio-caption">
+                <h3>B&T</h3>
+                <p>Industries</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-project="viachristi">
+            <img src="modals/viachristi.jpg" alt="Via Christi Ascension Website">
+            <div class="portfolio-overlay">
+                <span class="plus">+</span>
+            </div>
+
+            <div class="portfolio-caption">
+                <h3>Via Christi</h3>
+                <p>Ascension</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-project="austinhealey">
+            <img src="modals/austinhealey.jpg" alt="Austin Healey Website">
+            <div class="portfolio-overlay">
+                <span class="plus">+</span>
+            </div>
+            <div class="portfolio-caption">
+                <h3>Austin Healey</h3>
+                <p>Club of America</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-project="creditunion">
+            <img src="modals/creditunion.jpg" alt="Credit Union of Emporia Website">
+            <div class="portfolio-overlay">
+                <span class="plus">+</span>
+            </div>
+
+            <div class="portfolio-caption">
+                <h3>Credit Union</h3>
+                <p>of Emporia</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item" data-project="basketballstars">
+            <img src="modals/basketballstars.jpg" alt="Basketball Stars of America AAU Website">
+            <div class="portfolio-overlay">
+                <span class="plus">+</span>
+            </div>
+            <div class="portfolio-caption">
+                <h3>Basketball Stars</h3>
+                <p>of America AAU</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">×</button>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-url" id="modalUrl"></p>
+        <img id="modalImage" src="" alt="">
+        <p id="modalDescription" class="modal-description"></p>
+        <button class="close-project-btn" id="closeProjectBtn">✕ Close Project</button>
+    </div>
+</div>
+
+<div class="about-section" id="about">
+    <p class="third-header">ABOUT</p>
+    <p class="mid-caption">How do you connect with your customers? How do your customers find you? The first rule of marketing is to re-invent your business. What makes your business remarkable? Anyone can create a website but no one can create a website that evokes emotion, thought, and sparks like Insite Motion. The reason we are so successful at reaching your customer is because we realize there is more to marketing than a website.</p>
+
+    <div class="timeline">
+
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item">
+            <div class="timeline-text">
+                <h4>2003</h4>
+                <h3>Insite Motion is formed</h3>
+                <p>We started with a simple idea that we could help people grow their business with honesty and integrity.</p>
+                </div>
+                <div class="timeline-icon">
+                    <div href="https://www.insitemotion.com/" target="_blank" class="timeline-icon clickable">
+                        <img src="insite.png" alt="Insite Motion Logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div></div>
+                <a href="https://www.repnexus.com/" target="_blank" class="timeline-icon clickable">
+                    <img src="repnexus.png" alt="Rep Nexus Logo">
+                </a>
+                <div class="timeline-text right">
+                    <h4>2006</h4>
+                    <h3>Rep Nexus</h3>
+                    <p>Rep Nexus helps independent sales reps with marketing, creating, managing, implementing and reporting on all aspects of their sales cycle.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+            <div class="timeline-text">
+                <h4>2008</h4>
+                <h3>Ready Power Market</h3>
+                <p>Ready Power Market’s focus is on the auto repair industry, and our professional team brings concepts to life with beautifully executed, inspired design and marketing.</p>
+                </div>
+                <div class="timeline-icon">
+                    <a href="https://www.readypowermarket.com/" target="_blank" class="timeline-icon clickable">
+                        <img src="RPM.png" alt="Ready Power Market Logo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div></div>
+                <a href="https://www.moxieautoconsulting.com/" target="_blank" class="timeline-icon clickable">
+                    <img src="moxie.png" alt="Moxie Automotive Consulting Logo">
+                </a>
+                <div class="timeline-text right">
+                    <h4>2025</h4>
+                    <h3>Moxie Automotive Consulting</h3>
+                    <p>Moxie Automotive Consulting helps shop owners stop surviving and start scaling—without burning out, bleeding profits, or babysitting their team.</p>
+                </div>
+            </div>
+
+        <div class="timeline-item">
+            <div></div>
+            <a href="#footer"class="timeline-icon final timeline-icon clickable">
+                <p>Be Part Of Our Story!</p>
+            </a>
+            <div></div>
+        </div>
+    </div>
+
+<div class="contact-section" id="contact">
+            <p class="contact-header">CONTACT US</p>
+            <p class="contact-caption">We want to hear from you! Let us help you create a personality for your business. Whether you are a start-up company looking for a new brand, or a well established corporation that is looking to rejuvenate their current identity, we can help you achieve success.</p>
+
+            <form class="contact-form">
+                <div class="form-left">
+                    <input type="text" placeholder="Your Name *" required>
+                    <input type="email" placeholder="Your Email *" required>
+                    <input type="tel" placeholder="Your Phone *" required>
+                </div>
+                <div class="form-right">
+                    <textarea placeholder="Your Message *" required></textarea>
+                </div>
+                <button type="submit" class="send-btn">SEND MESSAGE</button>
+            </form>
+        </div>
+</main>
+
+<footer id="footer">
+    <div class="footer-left">
+        <p>Copyright © 2026 - Insite Motion, Inc</p>
+    </div>
+
+    <div class="footer-center">
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+            <span>𝕏</span> <!--I actually got the icon, pretty cool right-->
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+            <span>f</span>
+        </a>
+    </div>
+
+    <div class="footer-right">
+        <p>Phone: <span class="phone-number">951.977.3508</span> &nbsp; Fax: 866.385.7665</p>
+    </div>
+</footer>
+</body>
+</html>

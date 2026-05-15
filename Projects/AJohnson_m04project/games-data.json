@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Gimmick!",
+    "rating": 4.83,
+    "released": "1992-01-31",
+    "genres": "N/A"
+  },
+  {
+    "name": "Adventure Island IV",
+    "rating": 4.71,
+    "released": "1994-06-24",
+    "genres": "Platformer, Adventure"
+  },
+  {
+    "name": "Nekketsu Kakutou Densetsu",
+    "rating": 4.67,
+    "released": "1992-12-23",
+    "genres": "Fighting"
+  },
+  {
+    "name": "Gemfire",
+    "rating": 4.67,
+    "released": "1991-08-29",
+    "genres": "Strategy"
+  },
+  {
+    "name": "Turrican",
+    "rating": 4.67,
+    "released": "1990-01-01",
+    "genres": "N/A"
+  },
+  {
+    "name": "Rockin' Kats",
+    "rating": 4.62,
+    "released": "1991-04-05",
+    "genres": "Platformer, Action"
+  },
+  {
+    "name": "Shatterhand",
+    "rating": 4.62,
+    "released": "1991-10-26",
+    "genres": "Platformer, Action"
+  },
+  {
+    "name": "Kick Master",
+    "rating": 4.57,
+    "released": "1992-01-01",
+    "genres": "Platformer, Action"
+  },
+  {
+    "name": "Little Samson",
+    "rating": 4.55,
+    "released": "1992-11-26",
+    "genres": "Platformer, Action"
+  },
+  {
+    "name": "Donkey Kong (1994)",
+    "rating": 4.5,
+    "released": "1994-06-14",
+    "genres": "Platformer, Puzzle"
+  }
+]

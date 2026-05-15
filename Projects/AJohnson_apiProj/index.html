@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M06 Project: API Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="crt-screen">
+    <div class="scratch-overlay"></div>
+    <a id="homebtn" href="../../index.html">[ HOME ]</a>
+    <div class="title-block">
+    <h1>API Project</h1>
+    <h3 class="credit">Module 6 | Time Taken: 7 Hours</h3>
+    </div>
+
+    <div id="startscreen">
+        <p class="difficultyselect">Select Difficulty:</p>
+        <button class="diffbtn selected" type="button" value="easy">Easy</button>
+        <button class="diffbtn" type="button" value="medium">Medium</button>
+        <button class="diffbtn" type="button" value="hard">Hard</button>
+        <br><br>
+        <button id="startbtn" type="button">START</button>
+    </div>
+
+    <div id="gamescreen" class="hide">
+        <p>Score: <span id="score">0</span></p>
+        <p>Question: <span id="questionnumber">1/10</span></p>
+        <p>Difficulty: <span id="diffdisplay"></span></p>
+        <p>Category: <span id="catdisplay"></span></p>
+        <p>Type: <span id="typedisplay"></span></p>
+        <hr>
+        <h2 id="questiontext"></h2>
+        <div id="answers"></div>
+        <br>
+    </div>
+
+        <button id="quitbtn" class="hide" type="button">[ QUIT ]</button>
+
+    <div id="gameoverscreen" class="hide">
+        <h2>GAME OVER</h2>
+        <p>Final Score: <span id="finalscore">0</span></p>
+        <p>Correct: <span id="statcorrect">0</span></p>
+        <p>Wrong: <span id="statwrong">0</span></p>
+        <button id="replaybtn" type="button">PLAY AGAIN</button>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

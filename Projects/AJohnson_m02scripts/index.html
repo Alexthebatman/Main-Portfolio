@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page About Scripts</title>
+    <link rel="stylesheet" href="m02.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="../../index.html">Home</a>
+    </nav>
+
+    <h1>Page About Scripts</h1>
+
+    <h3 class="credit">Module 2 | Time Taken: 12 Hours</h3>
+<div class="codesection">
+    <h2>Click on this gameboy to remove affordable consoles</h2>
+    <img src="gameboy.png" id="gameboyimage" class="gameboy" alt="image of an affordable gameboy">
+    <div class="code-box">
+    <button id="copybutton">Copy Code</button>
+    <pre><code id="copycode">$(document).ready(function () {
+    $(&#39;#gameboyimage&#39;).click(function () {
+
+// conditional operator
+
+const message = $(this).attr(&quot;src&quot;) === &quot;gameboy.png&quot; // checks if the image is a gameboy
+    ? &quot;You monster! you just removed affordable consoles from the market! Click the switch to bring back good consoles&quot; // upon the gamebody image being clicked, this message loads, and this is also accompanied by the switch 2 image showing
+    : &quot;Click on this gameboy to remove affordable consoles&quot;; // when it is clicked again, this message will show, and the gameboy image will show again, and the switch image will be removed
+
+$(&#39;.codesection h2&#39;).text(message); // this changes the text of the h2 element to the message variable, which is determined by the conditional operator above
+
+// loop
+
+const consoles = [&quot;gameboy&quot;, &quot;switch&quot;]; // this is an array of both the consoles shown. This shows a loop being used, though it serves little function aside from logging the console types into the console log.
+
+for (let i = 0; i &lt; consoles.length; i++) { // this is a for loop that iterates through the consoles array, and logs each console type into the console log, which is simply two of them.
+    console.log(consoles[i]);
+}
+
+// fall through
+
+const consoleType = $(this).attr(&quot;src&quot;) === &quot;gameboy.png&quot; // this checks if the image is a gameboy, like we did up top 
+    ? &quot;gameboy&quot; // if it is a gameboy, then the consoleType variable is set to &quot;gameboy&quot;
+    : &quot;switch&quot;; // if it is not a gameboy, then the consoleType variable is set to &quot;switch&quot;
+
+switch (consoleType) { // This assigns the consoleType variable to hold each case, which is either gameboy or switch. The code falls through each one and hits the break, satisfying the use of a fallthrough. It also logs the type of console.
+    case &quot;gameboy&quot;:
+    case &quot;switch&quot;:
+        console.log(&quot;Console detected:&quot;, consoleType);
+    break;
+}
+
+// show image
+
+const nextSrc = consoleType === &quot;gameboy&quot; // this sets a const to hold the gameboy image if the consoleType is gameboy, and the switch image if the consoleType is switch. This is what allows the images to change when clicked.
+    ? &quot;switch.webp&quot;
+    : &quot;gameboy.png&quot;;
+$(this).fadeOut(100, function () {
+    $(this).attr(&quot;src&quot;, nextSrc).fadeIn(100);
+});
+    });
+
+    //copy code button
+
+$(&#39;#copybutton&#39;).click(function () { // This function allows for copying the code
+    const codeText = $(&#39;#copycode&#39;).text();
+
+    navigator.clipboard.writeText(codeText).then(function () {
+        console.log(&quot;You copied my code! Darn you!&quot;);
+        $(&#39;#copybutton&#39;).text(&quot;Code copied!&quot;);
+
+        setTimeout(function () {
+    $(&#39;#copybutton&#39;).text(&quot;Copy Code&quot;);
+    }, 2000);
+
+        });
+    });
+});
+</code></pre>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="m02.js"></script>
+</body>
+</html>

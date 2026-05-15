@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Jersey+10&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Jersey+10&family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes bob-up-down {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(var(--bob-amount));
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    90% { opacity: 1; }
+    91% { opacity: 0.6; }
+    92% { opacity: 1; }
+    94% { opacity: 0.7; }
+    95% { opacity: 1; }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpeg');
+}
+
+
+.credit {
+    color: white;
+    text-align: center;
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.75rem 0 0;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+    font-family: "Bitcount Grid Double", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+    font-size: 5rem;
+    margin-top: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1, h3 {
+    --bob-amount: -1rem;
+    animation: bob-up-down 1.8s ease-in-out infinite;
+}
+
+.gamebox {
+    height: 1000px;
+    width: 700px;
+    background-color: black;
+    border: 20px solid brown;
+    border-image: url('border.jpeg') 30 round;
+    overflow-y: auto;
+    gap: 15px;
+}
+
+.center {
+    justify-content: center;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5rem;
+    color: white;
+}
+
+.gameslide {
+    height: 150px;
+    width: 100%;
+    padding: 15px 25px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    
+    background: #6a9be0;
+    box-shadow: 
+        inset 1px 1px 3px rgba(0, 0, 0, 0.3),
+        inset -1px -1px 2px rgba(255, 255, 255, 0.1);
+    border: 1px solid #5a8ac8;
+    
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.gameslide:hover {
+    background: linear-gradient(145deg, #8fb8ff, #7facf5, #6a9be0);
+    box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.4),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2),
+        0 6px 12px rgba(0, 0, 0, 0.35);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    
+    transform: translateY(-3px);
+}
+
+.gamename {
+    color: #000080;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.gamegenre {
+    color: #222;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+    color: black
+}
+
+.gamerating {
+    color: #ffd700;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: right;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.gameslide:nth-child(odd) {
+    background: #6a9be0;
+}
+
+.gameslide:nth-child(even) {
+    background: #7aabe8;
+}
+
+.exit-sign {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    z-index: 100;
+    animation: flicker 4s infinite;
+    transition: transform 0.3s ease;
+}
+
+.exit-sign:hover, .about-sign:hover {
+    transform: scale(1.2);
+}
+
+.about-sign {
+    position: fixed;
+    top: 130px;
+    left: 25px;
+    width: 200px;
+    z-index: 100;
+    animation: flicker 4s infinite;
+    transition: transform 0.3s ease;
+}
+
+.gamebox::-webkit-scrollbar {
+    width: 12px;
+}
+
+.gamebox::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 10px;
+}
+
+.gamebox::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+.funfact {
+    color: lightgrey;
+    margin-bottom: 2px;
+}
+
+.coupon {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    background: #ff6b6b;
+    border: 3px dashed white;
+    padding: 20px 30px;
+    transform: rotate(5deg);
+    z-index: 100;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.coupon-text {
+    color: white;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+.sticky1 {
+    position: fixed;
+    width: 35rem;
+    z-index: 10;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+    top: 5%;
+    left: 5%;
+    transform: rotate(-6deg);
+}
+
+.sticky2 {
+    position: fixed;
+    width: 35rem;
+    z-index: 10;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+    top: 45%;
+    right: 6%;
+    transform: rotate(4deg);
+}
+
+.sticky3 {
+    position: fixed;
+    width: 35rem;
+    z-index: 10;
+    filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+    top: 50%;
+    left: 13%;
+    transform: rotate(-3deg);
+}
+
+/* Mobile stuff */
+
+@media (max-width: 2100px) {
+    .sticky1, .sticky2, .sticky3 {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 8rem;
+    }
+
+    .credit {
+        font-size: 0.8rem;
+    }
+
+    .gamebox {
+        width: 90%;
+        height: 60vh;
+    }
+
+    .gameslide {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 10px 15px;
+        gap: 5px;
+    }
+
+    .gamename {
+        font-size: 1.3rem;
+    }
+
+    .gamegenre, .gamerating {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .sticky {
+        display: none;
+    }
+
+    .exit-sign {
+        width: 80px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .about-sign {
+        width: 80px;
+        top: 70px;
+        left: 13px;
+    }
+
+    .coupon {
+        width: 120px;
+        padding: 8px 10px;
+        top: 20px;
+        right: 10px;
+    }
+
+    .coupon-text {
+        font-size: 1.2rem;
+    }
+
+    .funfact {
+        font-size: 0.8rem;
+    }
+}

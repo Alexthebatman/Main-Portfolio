@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "typescript": "^6.0.2"
+  },
+  "name": "ajohnson_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc index && node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

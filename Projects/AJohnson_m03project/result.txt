@@ -1,0 +1,11 @@
+Character: Merlin
+Weapon: staff
+Base Power: 114
+Attack Score: 2.00
+Magic Score: 16.00
+Defense Score: 1.00
+Total Power: 133
+Rating: S-Tier
+
+Story:
+A staff appears in front of Merlin. He picks it up and for a single moment, he becomes the most powerful in the world. The wind howls, the clouds gather. His eyes go black as he conjures the most unimaginable, the most violent, the most uncontrollable.. Merlin? Merlin are you there? Oh, it seems he fell asleep before he could finish the spell. Old age is a bummer.
